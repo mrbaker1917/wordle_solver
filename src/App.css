@@ -15,13 +15,45 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-body {
+  background-color: #162646;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+.place-list {
+  margin-top: 50px;
+}
+.place-list li {
+  display: inline;
+}
+input {
+  height: 70px;
+  width: 70px;
+  margin: 5px;
+  text-align: center;
+  font-size: 50px;
+  text-transform: capitalize;
+  font-weight: 900;
+  border-radius: 5px;
 }
 
 .App-link {
