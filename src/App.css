@@ -45,25 +45,63 @@ ul {
   list-style: none;
 }
 
+li {
+  margin-top: 20px;
+}
+
 .place-list {
   margin-top: 50px;
 }
 .place-list li {
   display: inline;
 }
-input {
+.place-list input {
   height: 70px;
   width: 70px;
   margin: 5px;
   text-align: center;
   font-size: 50px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   font-weight: 900;
   border-radius: 5px;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.banned-letters {
+  height: 40px;
+  width: 200px;
+  margin: 5px;
+  text-align: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 900;
+  border-radius: 5px;
+}
+
+.right-letters {
+  height: 40px;
+  width: 200px;
+  margin: 5px;
+  text-align: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 900;
+  border-radius: 5px;
+}
+
+.submit-button {
+  height: 60px;
+  width: 200px;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 900;
+  border-radius: 5px;
 }
 
 @keyframes App-logo-spin {
