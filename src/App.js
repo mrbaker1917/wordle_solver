@@ -8,14 +8,13 @@ function App() {
       </header>
       <body className="App-body">
         <p>
-          If you want some help to solve wordle, just follow the instructions
-          below.
+          If you want some help to solve wordle, just follow the tips below.
         </p>
         <form>
           <ul>
-            <li>Tip 1: Enter the word "AROSE" as your first guess.</li>
+            <li><span className="tip">TIP 1</span>: Enter the word "AROSE" as your first guess.</li>
             <li>
-              Tip 2: If any letters were green after that first guess, enter
+            <span className="tip">TIP 2</span>: If any letters were green after that first guess, enter
               them in the correct place below:
             </li>
             <li>
@@ -37,12 +36,16 @@ function App() {
                 </li>
               </ul>
             </li>
-            <li>Tip 3: Input in the space below any letters that are grey in your guess:
-              <br/>
+            <li>
+            <span className="tip">TIP 3</span>: Input in the space below any letters that are grey in your
+              guess:
+              <br />
               <input className="banned-letters" />
             </li>
-            <li>Tip 4: Input in the field below any letters that were correct, but in the wrong place:
-              <br/>
+            <li>
+            <span className="tip">TIP 4</span>: Input in the field below any letters that were correct, but
+              in the wrong place:
+              <br />
               <input className="right-letters" />
             </li>
           </ul>
