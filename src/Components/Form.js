@@ -46,19 +46,19 @@ export default class Form extends React.Component {
             </li>
             <li>
               <ul className="place-list">
-                <li className="placers">
+                <li className="placers place0">
                   <input />
                 </li>
-                <li className="placers">
+                <li className="placers place1">
                   <input />
                 </li>
-                <li className="placers">
+                <li className="placers place2">
                   <input />
                 </li>
-                <li className="placers">
+                <li className="placers place3">
                   <input />
                 </li>
-                <li className="placers">
+                <li className="placers place4">
                   <input />
                 </li>
               </ul>
