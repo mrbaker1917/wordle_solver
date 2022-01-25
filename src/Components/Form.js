@@ -12,7 +12,7 @@ export default class Form extends React.Component {
       place4: "",
       bannedLetters: "",
       rightLetters: "",
-      select_words: [],
+      select_words: getWords(),
       clicked: false,
     };
   }
@@ -38,40 +38,40 @@ export default class Form extends React.Component {
           <ul>
             <li>
               <span className="tip">TIP 1</span>: Enter the word "AROSE" as your
-              first guess.
+              first guess (works with other five-letter words as well).
             </li>
             <li>
               <span className="tip">TIP 2</span>: If any letters were green
-              after that first guess, enter them in the correct place below:
+              after that first guess, enter them in the correct places below:
             </li>
             <li>
               <ul className="place-list">
                 <li className="placers place0">
-                  <input />
+                  <input maxLength={1} />
                 </li>
                 <li className="placers place1">
-                  <input />
+                  <input maxLength={1} />
                 </li>
                 <li className="placers place2">
-                  <input />
+                  <input maxLength={1} />
                 </li>
                 <li className="placers place3">
-                  <input />
+                  <input maxLength={1} />
                 </li>
                 <li className="placers place4">
-                  <input />
+                  <input maxLength={1} />
                 </li>
               </ul>
             </li>
             <li>
               <span className="tip">TIP 3</span>: Input in the space below any
-              letters that are grey in your guess:
+              letters that are grey in your guess (no spaces or commas, side by side):
               <br />
               <input className="banned-letters" />
             </li>
             <li>
               <span className="tip">TIP 4</span>: Input in the field below any
-              letters that were correct, but in the wrong place:
+              letters that were correct, but in the wrong place (no spaces or commas):
               <br />
               <input className="right-letters" />
             </li>
