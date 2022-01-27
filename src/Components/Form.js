@@ -26,6 +26,7 @@ export default class Form extends React.Component {
     this.setState({
       [name] : value.toLowerCase(),
     })
+    console.log(value)
   }
 
   wordFilter(places, bad_letters, good_letters) {
@@ -82,19 +83,54 @@ export default class Form extends React.Component {
             <li>
               <ul className="place-list">
                 <li className="placers">
-                  <input maxLength={1} className="place0" />
+                  <input 
+                  maxLength={1} 
+                  className="place0" 
+                  value={this.state.place0}
+                  onChange={this.handleInputChange}
+                  name="place0"
+                  autoComplete="off"
+                   />
                 </li>
                 <li className="placers">
-                  <input maxLength={1} className="=place1" />
+                <input 
+                  maxLength={1} 
+                  className="place1" 
+                  value={this.state.place1}
+                  onChange={this.handleInputChange}
+                  name="place1"
+                  autoComplete="off"
+                   />
                 </li>
                 <li className="placers">
-                  <input maxLength={1} className="place2" />
+                <input 
+                  maxLength={1} 
+                  className="place2" 
+                  value={this.state.place2}
+                  onChange={this.handleInputChange}
+                  name="place2"
+                  autoComplete="off"
+                   />
                 </li>
                 <li className="placers">
-                  <input maxLength={1} className="place3" />
+                <input 
+                  maxLength={1} 
+                  className="place3" 
+                  value={this.state.place3}
+                  onChange={this.handleInputChange}
+                  name="place3"
+                  autoComplete="off"
+                   />
                 </li>
                 <li className="placers">
-                  <input maxLength={1} className="place4" />
+                <input 
+                  maxLength={1} 
+                  className="place4" 
+                  value={this.state.place4}
+                  onChange={this.handleInputChange}
+                  name="place4"
+                  autoComplete="off"
+                   />
                 </li>
               </ul>
             </li>
@@ -102,13 +138,25 @@ export default class Form extends React.Component {
               <span className="tip">TIP 3</span>: Input in the space below any
               letters that are grey in your guess (no spaces or commas, side by side):
               <br />
-              <input className="banned-letters" />
+              <input 
+                  className="bannedLetters" 
+                  value={this.state.bannedLetters}
+                  onChange={this.handleInputChange}
+                  name="bannedLetters"
+                  autoComplete="off"
+                   />
             </li>
             <li>
               <span className="tip">TIP 4</span>: Input in the field below any
               letters that were correct, but in the wrong place (no spaces or commas):
               <br />
-              <input className="right-letters" />
+              <input 
+              className="rightLetters"
+              value={this.state.rightLetters}
+              onChange={this.handleInputChange}
+              name="rightLetters"
+              autoComplete="off"
+              />
             </li>
           </ul>
           <button className="submit-button">Submit</button>
