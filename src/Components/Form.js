@@ -16,6 +16,29 @@ export default class Form extends React.Component {
       clicked: false,
     };
   }
+  wordFilter(places, bad_letters, good_letters) {
+    let words = this.state.select_words;
+    let filtered_words = words.filter(word  => {
+      for (const k in places) {
+        if (word[k] !== places[k]) {
+          return false
+        }
+      }
+      for (const b of bad_letters) {
+        if (word.includes(b) === true) {
+          return false
+        }
+      }
+      for (const g of good_letters) {
+        if (word.includes(g) === false) {
+          return false
+        }
+      }
+      return true
+    })
+    return filtered_words
+  }
+
 
   render() {
     if (this.state.clicked === true) {
@@ -46,20 +69,20 @@ export default class Form extends React.Component {
             </li>
             <li>
               <ul className="place-list">
-                <li className="placers place0">
-                  <input maxLength={1} />
+                <li className="placers">
+                  <input maxLength={1} className="place0" />
                 </li>
-                <li className="placers place1">
-                  <input maxLength={1} />
+                <li className="placers">
+                  <input maxLength={1} className="=place1" />
                 </li>
-                <li className="placers place2">
-                  <input maxLength={1} />
+                <li className="placers">
+                  <input maxLength={1} className="place2" />
                 </li>
-                <li className="placers place3">
-                  <input maxLength={1} />
+                <li className="placers">
+                  <input maxLength={1} className="place3" />
                 </li>
-                <li className="placers place4">
-                  <input maxLength={1} />
+                <li className="placers">
+                  <input maxLength={1} className="place4" />
                 </li>
               </ul>
             </li>
