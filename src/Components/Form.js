@@ -26,7 +26,6 @@ export default class Form extends React.Component {
     this.setState({
       [name] : value.toLowerCase(),
     })
-    console.log(value)
   }
 
   wordFilter(places, bad_letters, good_letters) {
@@ -159,7 +158,7 @@ export default class Form extends React.Component {
               />
             </li>
           </ul>
-          <button className="submit-button">Submit</button>
+          <button className="submitButton" type="submit" value="Submit">Submit</button>
         </form>
       </React.Fragment>
     );
