@@ -15,7 +15,19 @@ export default class Form extends React.Component {
       select_words: getWords(),
       clicked: false,
     };
+    this.wordFilter = this.wordFilter.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
   }
+
+  handleInputChange(event) {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+    this.setState({
+      [name] : value.toLowerCase(),
+    })
+  }
+
   wordFilter(places, bad_letters, good_letters) {
     let words = this.state.select_words;
     let filtered_words = words.filter(word  => {
