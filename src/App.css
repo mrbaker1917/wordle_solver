@@ -112,3 +112,14 @@ li {
   align-items: center;
 }
 
+.reset-btn {
+  padding: 10px;
+  min-width: 100px;
+  background-color: rgb(12, 1, 1);
+  color: aliceblue;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 5px;
+  border-style: ridge;
+}
+

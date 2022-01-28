@@ -18,6 +18,7 @@ export default class Form extends React.Component {
     this.wordFilter = this.wordFilter.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.refreshPage = this.refreshPage.bind(this);
   }
 
   handleInputChange(event) {
@@ -27,6 +28,10 @@ export default class Form extends React.Component {
     this.setState({
       [name]: value.toLowerCase(),
     });
+  }
+
+  refreshPage() {
+    return window.location.reload();
   }
 
   wordFilter(places, bad_letters, good_letters) {
@@ -63,7 +68,7 @@ export default class Form extends React.Component {
       bannedLetters,
       rightLetters,
     } = this.state;
-    
+
     let places = { 0: place0, 1: place1, 2: place2, 3: place3, 4: place4 };
     this.setState({
       clicked: true,
@@ -76,13 +81,18 @@ export default class Form extends React.Component {
       return (
         <React.Fragment>
           <div className="filtered-words">
+          <button className="reset-btn" onClick={this.refreshPage}>
+            Reset
+          </button>
             <h2>Now input one of these words:</h2>
             <ul>
               {this.state.select_words.map((word) => {
                 return <li key={word}>{word}</li>;
               })}
             </ul>
-            <h3>If not yet solved, add the new info to the form below and submit.</h3>
+            <h3>
+              If not yet solved, add the new info to the form below and submit.
+            </h3>
           </div>
           <form className="form" onSubmit={this.handleSubmit}>
             <ul>
