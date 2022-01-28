@@ -104,7 +104,7 @@ li {
   font-weight: 900;
 }
 
-.filtered_words {
+.filtered-words {
   display: flex;
   flex-direction: column;
   opacity: 0.9;

@@ -64,7 +64,6 @@ export default class Form extends React.Component {
       rightLetters,
     } = this.state;
     let places = { 0: place0, 1: place1, 2: place2, 3: place3, 4: place4 };
-    console.log(places);
     this.setState({
       clicked: true,
       select_words: this.wordFilter(places, bannedLetters, rightLetters),
@@ -76,19 +75,16 @@ export default class Form extends React.Component {
       return (
         <React.Fragment>
           <div className="filtered-words">
-            <h2>Input one of these words, then complete the form again.</h2>
+            <h2>Now input one of these words:</h2>
             <ul>
               {this.state.select_words.map((word) => {
                 return <li key={word}>{word}</li>;
               })}
             </ul>
+            <h3>If not yet solved, add the new info to the form below and submit.</h3>
           </div>
           <form className="form" onSubmit={this.handleSubmit}>
             <ul>
-              <li>
-                <span className="tip">TIP 1</span>: Enter the word "AROSE" as
-                your first guess (works with other five-letter words as well).
-              </li>
               <li>
                 <span className="tip">TIP 2</span>: If any letters were green
                 after that first guess, enter them in the correct places below:
