@@ -38,7 +38,7 @@ export default class Form extends React.Component {
         }
       }
       for (const b of bad_letters) {
-        if (word.includes(b) === true) {
+        if (word.includes(b) === true && !Object.values(places).includes(b)) {
           return false;
         }
       }
@@ -63,6 +63,7 @@ export default class Form extends React.Component {
       bannedLetters,
       rightLetters,
     } = this.state;
+    
     let places = { 0: place0, 1: place1, 2: place2, 3: place3, 4: place4 };
     this.setState({
       clicked: true,
