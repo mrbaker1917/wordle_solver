@@ -17,6 +17,7 @@ export default class Form extends React.Component {
     };
     this.wordFilter = this.wordFilter.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleInputChange(event) {
@@ -24,33 +25,51 @@ export default class Form extends React.Component {
     const value = target.value;
     const name = target.name;
     this.setState({
-      [name] : value.toLowerCase(),
-    })
+      [name]: value.toLowerCase(),
+    });
   }
 
   wordFilter(places, bad_letters, good_letters) {
     let words = this.state.select_words;
-    let filtered_words = words.filter(word  => {
+    let filtered_words = words.filter((word) => {
       for (const k in places) {
-        if (word[k] !== places[k]) {
-          return false
+        if (places[k] !== "" && word[k] !== places[k]) {
+          return false;
         }
       }
       for (const b of bad_letters) {
         if (word.includes(b) === true) {
-          return false
+          return false;
         }
       }
       for (const g of good_letters) {
         if (word.includes(g) === false) {
-          return false
+          return false;
         }
       }
-      return true
-    })
-    return filtered_words
+      return true;
+    });
+    return filtered_words;
   }
 
+  handleSubmit(event) {
+    event.preventDefault();
+    let {
+      place0,
+      place1,
+      place2,
+      place3,
+      place4,
+      bannedLetters,
+      rightLetters,
+    } = this.state;
+    let places = { 0: place0, 1: place1, 2: place2, 3: place3, 4: place4 };
+    console.log(places);
+    this.setState({
+      clicked: true,
+      select_words: this.wordFilter(places, bannedLetters, rightLetters),
+    });
+  }
 
   render() {
     if (this.state.clicked === true) {
@@ -64,12 +83,107 @@ export default class Form extends React.Component {
               })}
             </ul>
           </div>
+          <form className="form" onSubmit={this.handleSubmit}>
+            <ul>
+              <li>
+                <span className="tip">TIP 1</span>: Enter the word "AROSE" as
+                your first guess (works with other five-letter words as well).
+              </li>
+              <li>
+                <span className="tip">TIP 2</span>: If any letters were green
+                after that first guess, enter them in the correct places below:
+              </li>
+              <li>
+                <ul className="place-list">
+                  <li className="placers">
+                    <input
+                      maxLength={1}
+                      className="place0"
+                      value={this.state.place0}
+                      onChange={this.handleInputChange}
+                      name="place0"
+                      autoComplete="off"
+                    />
+                  </li>
+                  <li className="placers">
+                    <input
+                      maxLength={1}
+                      className="place1"
+                      value={this.state.place1}
+                      onChange={this.handleInputChange}
+                      name="place1"
+                      autoComplete="off"
+                    />
+                  </li>
+                  <li className="placers">
+                    <input
+                      maxLength={1}
+                      className="place2"
+                      value={this.state.place2}
+                      onChange={this.handleInputChange}
+                      name="place2"
+                      autoComplete="off"
+                    />
+                  </li>
+                  <li className="placers">
+                    <input
+                      maxLength={1}
+                      className="place3"
+                      value={this.state.place3}
+                      onChange={this.handleInputChange}
+                      name="place3"
+                      autoComplete="off"
+                    />
+                  </li>
+                  <li className="placers">
+                    <input
+                      maxLength={1}
+                      className="place4"
+                      value={this.state.place4}
+                      onChange={this.handleInputChange}
+                      name="place4"
+                      autoComplete="off"
+                    />
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <span className="tip">TIP 3</span>: Input in the space below any
+                letters that are grey in your guess (no spaces or commas, side
+                by side):
+                <br />
+                <input
+                  className="bannedLetters"
+                  value={this.state.bannedLetters}
+                  onChange={this.handleInputChange}
+                  name="bannedLetters"
+                  autoComplete="off"
+                />
+              </li>
+              <li>
+                <span className="tip">TIP 4</span>: Input in the field below any
+                letters that were correct, but in the wrong place (no spaces or
+                commas):
+                <br />
+                <input
+                  className="rightLetters"
+                  value={this.state.rightLetters}
+                  onChange={this.handleInputChange}
+                  name="rightLetters"
+                  autoComplete="off"
+                />
+              </li>
+            </ul>
+            <button className="submitButton" type="submit" value="Submit">
+              Submit
+            </button>
+          </form>
         </React.Fragment>
       );
     }
     return (
       <React.Fragment>
-        <form>
+        <form className="form" onSubmit={this.handleSubmit}>
           <ul>
             <li>
               <span className="tip">TIP 1</span>: Enter the word "AROSE" as your
@@ -82,83 +196,87 @@ export default class Form extends React.Component {
             <li>
               <ul className="place-list">
                 <li className="placers">
-                  <input 
-                  maxLength={1} 
-                  className="place0" 
-                  value={this.state.place0}
-                  onChange={this.handleInputChange}
-                  name="place0"
-                  autoComplete="off"
-                   />
+                  <input
+                    maxLength={1}
+                    className="place0"
+                    value={this.state.place0}
+                    onChange={this.handleInputChange}
+                    name="place0"
+                    autoComplete="off"
+                  />
                 </li>
                 <li className="placers">
-                <input 
-                  maxLength={1} 
-                  className="place1" 
-                  value={this.state.place1}
-                  onChange={this.handleInputChange}
-                  name="place1"
-                  autoComplete="off"
-                   />
+                  <input
+                    maxLength={1}
+                    className="place1"
+                    value={this.state.place1}
+                    onChange={this.handleInputChange}
+                    name="place1"
+                    autoComplete="off"
+                  />
                 </li>
                 <li className="placers">
-                <input 
-                  maxLength={1} 
-                  className="place2" 
-                  value={this.state.place2}
-                  onChange={this.handleInputChange}
-                  name="place2"
-                  autoComplete="off"
-                   />
+                  <input
+                    maxLength={1}
+                    className="place2"
+                    value={this.state.place2}
+                    onChange={this.handleInputChange}
+                    name="place2"
+                    autoComplete="off"
+                  />
                 </li>
                 <li className="placers">
-                <input 
-                  maxLength={1} 
-                  className="place3" 
-                  value={this.state.place3}
-                  onChange={this.handleInputChange}
-                  name="place3"
-                  autoComplete="off"
-                   />
+                  <input
+                    maxLength={1}
+                    className="place3"
+                    value={this.state.place3}
+                    onChange={this.handleInputChange}
+                    name="place3"
+                    autoComplete="off"
+                  />
                 </li>
                 <li className="placers">
-                <input 
-                  maxLength={1} 
-                  className="place4" 
-                  value={this.state.place4}
-                  onChange={this.handleInputChange}
-                  name="place4"
-                  autoComplete="off"
-                   />
+                  <input
+                    maxLength={1}
+                    className="place4"
+                    value={this.state.place4}
+                    onChange={this.handleInputChange}
+                    name="place4"
+                    autoComplete="off"
+                  />
                 </li>
               </ul>
             </li>
             <li>
               <span className="tip">TIP 3</span>: Input in the space below any
-              letters that are grey in your guess (no spaces or commas, side by side):
+              letters that are grey in your guess (no spaces or commas, side by
+              side):
               <br />
-              <input 
-                  className="bannedLetters" 
-                  value={this.state.bannedLetters}
-                  onChange={this.handleInputChange}
-                  name="bannedLetters"
-                  autoComplete="off"
-                   />
+              <input
+                className="bannedLetters"
+                value={this.state.bannedLetters}
+                onChange={this.handleInputChange}
+                name="bannedLetters"
+                autoComplete="off"
+              />
             </li>
             <li>
               <span className="tip">TIP 4</span>: Input in the field below any
-              letters that were correct, but in the wrong place (no spaces or commas):
+              letters that were correct, but in the wrong place (no spaces or
+              commas):
               <br />
-              <input 
-              className="rightLetters"
-              value={this.state.rightLetters}
-              onChange={this.handleInputChange}
-              name="rightLetters"
-              autoComplete="off"
+              <input
+                className="rightLetters"
+                value={this.state.rightLetters}
+                onChange={this.handleInputChange}
+                name="rightLetters"
+                autoComplete="off"
               />
             </li>
           </ul>
-          <button className="submitButton" type="submit" value="Submit">Submit</button>
+          <button className="submitButton" type="submit" value="Submit">
+            Submit
+          </button>
         </form>
       </React.Fragment>
     );
