@@ -135,3 +135,32 @@ li {
   color:rgb(12, 1, 1);
 }
 
+.filtered-words ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: -10px;
+  padding: 20px;
+  width: 90%;
+}
+
+.filtered-words li {
+  list-style: none;
+  padding: 5px;
+  font-weight: 500;
+  min-width: 120px;
+  margin: 5px;
+  color: #FED71B;
+  border-radius: 4px;
+  background: #282c34;
+  transition: background-color 2s ease-out 100ms;
+}
+
+.filtered-words li:hover {
+  font-weight: 900;
+  background-color: purple;
+}
