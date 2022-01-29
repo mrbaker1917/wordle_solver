@@ -265,6 +265,7 @@ export default class Form extends React.Component {
                 onChange={this.handleInputChange}
                 name="bannedLetters"
                 autoComplete="off"
+                placeholder="bad letters"
               />
             </li>
             <li>
@@ -278,6 +279,7 @@ export default class Form extends React.Component {
                 onChange={this.handleInputChange}
                 name="rightLetters"
                 autoComplete="off"
+                placeholder="misplaced letters"
               />
             </li>
           </ul>
