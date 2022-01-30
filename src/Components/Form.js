@@ -54,7 +54,8 @@ export default class Form extends React.Component {
       }
       return true;
     });
-    return filtered_words;
+
+    return filtered_words.sort();
   }
 
   handleSubmit(event) {
