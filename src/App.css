@@ -70,6 +70,27 @@ li {
   color: aliceblue;
 }
 
+.wplace-list {
+  margin-top: 30px;
+}
+
+.wplace-list li {
+  display:  inline;
+}
+
+.wplace-list input {
+  height: 70px;
+  width: 70px;
+  margin: 5px;
+  text-align: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 900;
+  border-radius: 5px;
+  background-color: #C9B458;
+  color: aliceblue;
+}
+
 .App-link {
   color: #61dafb;
 }
