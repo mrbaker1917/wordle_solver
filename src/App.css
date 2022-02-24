@@ -38,14 +38,12 @@ h1 {
   font-size: small;
   margin-top: -20px;
   margin-bottom: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .App-header a:hover {
   color: pink;
-  font-weight: 700;
-  /* border: 1px solid  pink;
-  padding: 5px;
-  border-radius: 5px; */
+  font-weight: 600;
 }
 
 .App-body {
