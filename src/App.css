@@ -29,7 +29,12 @@ h1 {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: aliceblue;
+}
+
+.App-header span:hover {
+  color: pink;
+  font-weight: 700;
 }
 
 .App-header a {
