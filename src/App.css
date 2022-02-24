@@ -32,6 +32,22 @@ h1 {
   color: white;
 }
 
+.App-header a {
+  color: aliceblue;
+  text-decoration: none;
+  font-size: small;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+.App-header a:hover {
+  color: pink;
+  font-weight: 700;
+  /* border: 1px solid  pink;
+  padding: 5px;
+  border-radius: 5px; */
+}
+
 .App-body {
   background-color: #162646;
   min-height: 80vh;
