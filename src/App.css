@@ -3,6 +3,8 @@
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  min-width: fit-content;
+  min-height: 100%;
 }
 
 @keyframes fadeInAnimation {
@@ -58,7 +60,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: left;
+  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -117,7 +119,7 @@ li {
 
 .bannedLetters {
   height: 60px;
-  min-width: 100px;
+  min-width: 50px;
   margin: 20px;
   text-align: center;
   font-size: 40px;
