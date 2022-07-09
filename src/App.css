@@ -16,11 +16,11 @@
 }
 
 h1 {
-  font-size: 80px;
+  font-size: 60px;
   letter-spacing: 5px;
   word-spacing: 20px;
   font-weight: 900;
-  font-family: 'Smokum', cursive;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .App-header {

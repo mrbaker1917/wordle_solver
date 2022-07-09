@@ -251,8 +251,8 @@ export default class Form extends React.Component {
         <form className="form" onSubmit={this.handleSubmit}>
           <ul>
             <li>
-              <span className="tip">TIP 1</span>: Enter the word "AROSE" as your
-              first guess (works with other five-letter words as well).
+              <span className="tip">TIP 1</span>: Enter the word "ADIEU" as your
+              first guess (works with any five-letter word).
             </li>
             <li>
               <span className="tip">TIP 2</span>: If any letters were green
