@@ -124,6 +124,7 @@ export default class Form extends React.Component {
                       onChange={this.handleInputChange}
                       name="place0"
                       autoComplete="off"
+                      type="text"
                     />
                   </li>
                   <li className="placers">
@@ -134,6 +135,7 @@ export default class Form extends React.Component {
                       onChange={this.handleInputChange}
                       name="place1"
                       autoComplete="off"
+                      type="text"
                     />
                   </li>
                   <li className="placers">
@@ -144,6 +146,7 @@ export default class Form extends React.Component {
                       onChange={this.handleInputChange}
                       name="place2"
                       autoComplete="off"
+                      type="text"
                     />
                   </li>
                   <li className="placers">
@@ -154,6 +157,7 @@ export default class Form extends React.Component {
                       onChange={this.handleInputChange}
                       name="place3"
                       autoComplete="off"
+                      type="text"
                     />
                   </li>
                   <li className="placers">
@@ -164,6 +168,7 @@ export default class Form extends React.Component {
                       onChange={this.handleInputChange}
                       name="place4"
                       autoComplete="off"
+                      type="text"
                     />
                   </li>
                 </ul>
@@ -179,6 +184,7 @@ export default class Form extends React.Component {
                   onChange={this.handleInputChange}
                   name="bannedLetters"
                   autoComplete="off"
+                  type="text"
                 />
               </li>
               <li>
@@ -194,6 +200,7 @@ export default class Form extends React.Component {
                     onChange={this.handleInputChange}
                     name="wplace0"
                     autoComplete="off"
+                    type="text"
                   />
                 </li>
                 <li className="placers">
@@ -204,6 +211,7 @@ export default class Form extends React.Component {
                     onChange={this.handleInputChange}
                     name="wplace1"
                     autoComplete="off"
+                    type="text"
                   />
                 </li>
                 <li className="placers">
@@ -214,6 +222,7 @@ export default class Form extends React.Component {
                     onChange={this.handleInputChange}
                     name="wplace2"
                     autoComplete="off"
+                    type="text"
                   />
                 </li>
                 <li className="placers">
@@ -224,6 +233,7 @@ export default class Form extends React.Component {
                     onChange={this.handleInputChange}
                     name="wplace3"
                     autoComplete="off"
+                    type="text"
                   />
                 </li>
                 <li className="placers">
@@ -234,6 +244,7 @@ export default class Form extends React.Component {
                     onChange={this.handleInputChange}
                     name="wplace4"
                     autoComplete="off"
+                    type="text"
                   />
                 </li>
               </ul>
@@ -268,6 +279,7 @@ export default class Form extends React.Component {
                     onChange={this.handleInputChange}
                     name="place0"
                     autoComplete="off"
+                    type="text"
                   />
                 </li>
                 <li className="placers">
@@ -278,6 +290,7 @@ export default class Form extends React.Component {
                     onChange={this.handleInputChange}
                     name="place1"
                     autoComplete="off"
+                    type="text"
                   />
                 </li>
                 <li className="placers">
@@ -288,6 +301,7 @@ export default class Form extends React.Component {
                     onChange={this.handleInputChange}
                     name="place2"
                     autoComplete="off"
+                    type="text"
                   />
                 </li>
                 <li className="placers">
@@ -298,6 +312,7 @@ export default class Form extends React.Component {
                     onChange={this.handleInputChange}
                     name="place3"
                     autoComplete="off"
+                    type="text"
                   />
                 </li>
                 <li className="placers">
@@ -308,6 +323,7 @@ export default class Form extends React.Component {
                     onChange={this.handleInputChange}
                     name="place4"
                     autoComplete="off"
+                    type="text"
                   />
                 </li>
               </ul>
@@ -324,6 +340,7 @@ export default class Form extends React.Component {
                 name="bannedLetters"
                 autoComplete="off"
                 placeholder="bad letters"
+                type="text"
               />
             </li>
             <li>
@@ -339,6 +356,7 @@ export default class Form extends React.Component {
                     onChange={this.handleInputChange}
                     name="wplace0"
                     autoComplete="off"
+                    type="text"
                   />
                 </li>
                 <li className="placers">
@@ -349,6 +367,7 @@ export default class Form extends React.Component {
                     onChange={this.handleInputChange}
                     name="wplace1"
                     autoComplete="off"
+                    type="text"
                   />
                 </li>
                 <li className="placers">
@@ -359,6 +378,7 @@ export default class Form extends React.Component {
                     onChange={this.handleInputChange}
                     name="wplace2"
                     autoComplete="off"
+                    type="text"
                   />
                 </li>
                 <li className="placers">
@@ -369,6 +389,7 @@ export default class Form extends React.Component {
                     onChange={this.handleInputChange}
                     name="wplace3"
                     autoComplete="off"
+                    type="text"
                   />
                 </li>
                 <li className="placers">
@@ -379,6 +400,7 @@ export default class Form extends React.Component {
                     onChange={this.handleInputChange}
                     name="wplace4"
                     autoComplete="off"
+                    type="text"
                   />
                 </li>
               </ul>
