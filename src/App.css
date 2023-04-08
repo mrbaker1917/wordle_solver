@@ -16,7 +16,7 @@
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 80px;
   letter-spacing: 5px;
   word-spacing: 20px;
   font-weight: 900;
@@ -24,7 +24,7 @@ h1 {
 }
 
 .App-header {
-  background-color: #055505;
+  background-color: #538D4E;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
@@ -88,7 +88,7 @@ li {
   text-transform: uppercase;
   font-weight: 900;
   border-radius: 5px;
-  background-color: #6AAA64;
+  background-color: #538D4E;
   color: aliceblue;
 }
 
