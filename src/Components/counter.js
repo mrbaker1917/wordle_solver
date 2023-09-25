@@ -9,7 +9,7 @@ function Counter() {
         setCount(initialCount + 1);
         localStorage.setItem("pageVisits", initialCount + 1);
     },[]);
-    return <div>I have been visited {count} times!</div>;
+    return <div>You have visited this app {count} time(s)!</div>;
 }
 
 export default Counter;
