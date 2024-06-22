@@ -58,12 +58,49 @@ export default class Form extends React.Component {
         if (good_letters[g] === word[g]) {
           return false;
         }
-
       }
       return true;
     });
+    const pop_letters = [
+      ("e", 1233),
+      ("a", 980),
+      ("r", 899),
+      ("o", 755),
+      ("t", 729),
+      ("l", 719),
+      ("i", 672),
+      ("s", 671),
+      ("n", 576),
+      ("c", 477),
+      ("u", 469),
+      ("y", 425),
+      ("d", 393),
+      ("h", 389),
+      ("p", 368),
+      ("m", 316),
+      ("g", 311),
+      ("b", 281),
+      ("f", 231),
+      ("k", 210),
+      ("w", 195),
+      ("v", 153),
+      ("z", 40),
+      ("x", 37),
+      ("q", 29),
+      ("j", 27),
+    ];
 
-    return filtered_words.sort();
+    return filtered_words.sort((a, b) => {
+      let a_score = 0;
+      let b_score = 0;
+      for (const l in a) {
+          a_score += pop_letters[l];
+        }
+      for (const l in b) {
+        b_score += pop_letters[l];
+      }
+      return b_score - a_score;
+    });
   }
 
   handleSubmit(event) {
@@ -83,7 +120,13 @@ export default class Form extends React.Component {
     } = this.state;
 
     let places = { 0: place0, 1: place1, 2: place2, 3: place3, 4: place4 };
-    let wplaces = {0: wplace0, 1: wplace1, 2: wplace2, 3: wplace3, 4: wplace4}
+    let wplaces = {
+      0: wplace0,
+      1: wplace1,
+      2: wplace2,
+      3: wplace3,
+      4: wplace4,
+    };
     this.setState({
       clicked: true,
       select_words: this.wordFilter(places, bannedLetters, wplaces),
@@ -95,9 +138,9 @@ export default class Form extends React.Component {
       return (
         <React.Fragment>
           <div className="filtered-words">
-          <button className="reset-btn" onClick={this.refreshPage}>
-            Reset
-          </button>
+            <button className="reset-btn" onClick={this.refreshPage}>
+              Reset
+            </button>
             <h2>Now input one of these words:</h2>
             <ul>
               {this.state.select_words.map((word) => {
@@ -188,66 +231,67 @@ export default class Form extends React.Component {
                 />
               </li>
               <li>
-              <span className="tip">TIP 4</span>: Input in the positions below any
-              letters that were correct, but in the wrong place (in wrong place):
-              <br />
-              <ul className="wplace-list">
-                <li className="placers">
-                  <input
-                    maxLength={1}
-                    className="wplace0"
-                    value={this.state.wplace0}
-                    onChange={this.handleInputChange}
-                    name="wplace0"
-                    autoComplete="off"
-                    type="text"
-                  />
-                </li>
-                <li className="placers">
-                  <input
-                    maxLength={1}
-                    className="wplace1"
-                    value={this.state.wplace1}
-                    onChange={this.handleInputChange}
-                    name="wplace1"
-                    autoComplete="off"
-                    type="text"
-                  />
-                </li>
-                <li className="placers">
-                  <input
-                    maxLength={1}
-                    className="wplace2"
-                    value={this.state.wplace2}
-                    onChange={this.handleInputChange}
-                    name="wplace2"
-                    autoComplete="off"
-                    type="text"
-                  />
-                </li>
-                <li className="placers">
-                  <input
-                    maxLength={1}
-                    className="wplace3"
-                    value={this.state.wplace3}
-                    onChange={this.handleInputChange}
-                    name="wplace3"
-                    autoComplete="off"
-                    type="text"
-                  />
-                </li>
-                <li className="placers">
-                  <input
-                    maxLength={1}
-                    className="wplace4"
-                    value={this.state.wplace4}
-                    onChange={this.handleInputChange}
-                    name="wplace4"
-                    autoComplete="off"
-                    type="text"
-                  />
-                </li>
-              </ul>
+                <span className="tip">TIP 4</span>: Input in the positions below
+                any letters that were correct, but in the wrong place (in wrong
+                place):
+                <br />
+                <ul className="wplace-list">
+                  <li className="placers">
+                    <input
+                      maxLength={1}
+                      className="wplace0"
+                      value={this.state.wplace0}
+                      onChange={this.handleInputChange}
+                      name="wplace0"
+                      autoComplete="off"
+                      type="text"
+                    />
+                  </li>
+                  <li className="placers">
+                    <input
+                      maxLength={1}
+                      className="wplace1"
+                      value={this.state.wplace1}
+                      onChange={this.handleInputChange}
+                      name="wplace1"
+                      autoComplete="off"
+                      type="text"
+                    />
+                  </li>
+                  <li className="placers">
+                    <input
+                      maxLength={1}
+                      className="wplace2"
+                      value={this.state.wplace2}
+                      onChange={this.handleInputChange}
+                      name="wplace2"
+                      autoComplete="off"
+                      type="text"
+                    />
+                  </li>
+                  <li className="placers">
+                    <input
+                      maxLength={1}
+                      className="wplace3"
+                      value={this.state.wplace3}
+                      onChange={this.handleInputChange}
+                      name="wplace3"
+                      autoComplete="off"
+                      type="text"
+                    />
+                  </li>
+                  <li className="placers">
+                    <input
+                      maxLength={1}
+                      className="wplace4"
+                      value={this.state.wplace4}
+                      onChange={this.handleInputChange}
+                      name="wplace4"
+                      autoComplete="off"
+                      type="text"
+                    />
+                  </li>
+                </ul>
               </li>
             </ul>
             <button className="submitButton" type="submit" value="Submit">
@@ -344,8 +388,9 @@ export default class Form extends React.Component {
               />
             </li>
             <li>
-              <span className="tip">TIP 4</span>: Input in the positions below any
-              letters that were correct, but in the wrong place (in wrong place):
+              <span className="tip">TIP 4</span>: Input in the positions below
+              any letters that were correct, but in the wrong place (in wrong
+              place):
               <br />
               <ul className="wplace-list">
                 <li className="placers">
