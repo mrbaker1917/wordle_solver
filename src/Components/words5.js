@@ -2329,6 +2329,8 @@ const words5 = [
   "rarer",
   "shave",
   "wryly",
+  "educe",
+  "tinge",
 ];
 
 export default function getWords() {
