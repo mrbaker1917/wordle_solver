@@ -2331,6 +2331,7 @@ const words5 = [
   "wryly",
   "educe",
   "tinge",
+  "colic",
 ];
 
 export default function getWords() {
