@@ -1011,6 +1011,7 @@ const words5 = [
   "hussy",
   "hutch",
   "hydro",
+  "hydra",
   "hyena",
   "hymen",
   "hyper",
