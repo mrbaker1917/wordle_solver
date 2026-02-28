@@ -303,7 +303,7 @@ ul {
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--border-color);
   max-width: 1000px;
-  margin: 2rem auto 0;
+  margin: 2rem auto 2rem;
   animation: fadeIn 0.6s ease-out;
 }
 
