@@ -38,6 +38,33 @@ export default class Form extends React.Component {
     return window.location.reload();
   }
 
+  // Calculate letter frequencies from all words
+  calculateLetterFrequencies() {
+    const letterCounts = {};
+    const allWords = this.state.select_words;
+    
+    // Count occurrences of each letter across all words
+    allWords.forEach(word => {
+      for (let char of word) {
+        letterCounts[char] = (letterCounts[char] || 0) + 1;
+      }
+    });
+    
+    return letterCounts;
+  }
+
+  // Calculate word score based on letter frequencies
+  calculateWordScore(word, letterFrequencies) {
+    let score = 0;
+    const uniqueLetters = new Set(word); // Only count each unique letter once per word
+    
+    uniqueLetters.forEach(letter => {
+      score += letterFrequencies[letter] || 0;
+    });
+    
+    return score;
+  }
+
   wordFilter(places, bad_letters, good_letters) {
     let words = this.state.select_words;
     let filtered_words = words.filter((word) => {
@@ -61,45 +88,14 @@ export default class Form extends React.Component {
       }
       return true;
     });
-    const pop_letters = [
-      ("e", 1233),
-      ("a", 980),
-      ("r", 899),
-      ("o", 755),
-      ("t", 729),
-      ("l", 719),
-      ("i", 672),
-      ("s", 671),
-      ("n", 576),
-      ("c", 477),
-      ("u", 469),
-      ("y", 425),
-      ("d", 393),
-      ("h", 389),
-      ("p", 368),
-      ("m", 316),
-      ("g", 311),
-      ("b", 281),
-      ("f", 231),
-      ("k", 210),
-      ("w", 195),
-      ("v", 153),
-      ("z", 40),
-      ("x", 37),
-      ("q", 29),
-      ("j", 27),
-    ];
 
+    // Calculate letter frequencies and sort by commonness
+    const letterFrequencies = this.calculateLetterFrequencies();
+    
     return filtered_words.sort((a, b) => {
-      let a_score = 0;
-      let b_score = 0;
-      for (const l in a) {
-          a_score += pop_letters[l];
-        }
-      for (const l in b) {
-        b_score += pop_letters[l];
-      }
-      return b_score - a_score;
+      const a_score = this.calculateWordScore(a, letterFrequencies);
+      const b_score = this.calculateWordScore(b, letterFrequencies);
+      return b_score - a_score; // Sort descending (most common letters first)
     });
   }
 
