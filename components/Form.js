@@ -139,9 +139,9 @@ export default class Form extends React.Component {
         <React.Fragment>
           <div className="filtered-words">
             <button className="reset-btn" onClick={this.refreshPage}>
-              Reset
+              🔄 Reset
             </button>
-            <h2>Now input one of these words:</h2>
+            <h2>💡 Suggested Words</h2>
             <ul>
               {this.state.select_words.map((word) => {
                 return <li key={word}>{word}</li>;
@@ -303,156 +303,147 @@ export default class Form extends React.Component {
     }
     return (
       <React.Fragment>
-        <form className="form" onSubmit={this.handleSubmit}>
-          <ul>
-            <li>
-              <span className="tip">TIP 1</span>: Enter the word "ADIEU" as your
-              first guess (works with any five-letter word).
-            </li>
-            <li>
-              <span className="tip">TIP 2</span>: If any letters were green
-              after that first guess, enter them in the correct places below:
-            </li>
-            <li>
-              <ul className="place-list">
-                <li className="placers">
-                  <input
-                    maxLength={1}
-                    className="place0"
-                    value={this.state.place0}
-                    onChange={this.handleInputChange}
-                    name="place0"
-                    autoComplete="off"
-                    type="text"
-                  />
-                </li>
-                <li className="placers">
-                  <input
-                    maxLength={1}
-                    className="place1"
-                    value={this.state.place1}
-                    onChange={this.handleInputChange}
-                    name="place1"
-                    autoComplete="off"
-                    type="text"
-                  />
-                </li>
-                <li className="placers">
-                  <input
-                    maxLength={1}
-                    className="place2"
-                    value={this.state.place2}
-                    onChange={this.handleInputChange}
-                    name="place2"
-                    autoComplete="off"
-                    type="text"
-                  />
-                </li>
-                <li className="placers">
-                  <input
-                    maxLength={1}
-                    className="place3"
-                    value={this.state.place3}
-                    onChange={this.handleInputChange}
-                    name="place3"
-                    autoComplete="off"
-                    type="text"
-                  />
-                </li>
-                <li className="placers">
-                  <input
-                    maxLength={1}
-                    className="place4"
-                    value={this.state.place4}
-                    onChange={this.handleInputChange}
-                    name="place4"
-                    autoComplete="off"
-                    type="text"
-                  />
-                </li>
-              </ul>
-            </li>
-            <li>
-              <span className="tip">TIP 3</span>: Input in the space below any
-              letters that are grey in your guess (no spaces or commas, side by
-              side):
-              <br />
-              <input
-                className="bannedLetters"
-                value={this.state.bannedLetters}
-                onChange={this.handleInputChange}
-                name="bannedLetters"
-                autoComplete="off"
-                placeholder="bad letters"
-                type="text"
-              />
-            </li>
-            <li>
-              <span className="tip">TIP 4</span>: Input in the positions below
-              any letters that were correct, but in the wrong place (in wrong
-              place):
-              <br />
-              <ul className="wplace-list">
-                <li className="placers">
-                  <input
-                    maxLength={1}
-                    className="wplace0"
-                    value={this.state.wplace0}
-                    onChange={this.handleInputChange}
-                    name="wplace0"
-                    autoComplete="off"
-                    type="text"
-                  />
-                </li>
-                <li className="placers">
-                  <input
-                    maxLength={1}
-                    className="wplace1"
-                    value={this.state.wplace1}
-                    onChange={this.handleInputChange}
-                    name="wplace1"
-                    autoComplete="off"
-                    type="text"
-                  />
-                </li>
-                <li className="placers">
-                  <input
-                    maxLength={1}
-                    className="wplace2"
-                    value={this.state.wplace2}
-                    onChange={this.handleInputChange}
-                    name="wplace2"
-                    autoComplete="off"
-                    type="text"
-                  />
-                </li>
-                <li className="placers">
-                  <input
-                    maxLength={1}
-                    className="wplace3"
-                    value={this.state.wplace3}
-                    onChange={this.handleInputChange}
-                    name="wplace3"
-                    autoComplete="off"
-                    type="text"
-                  />
-                </li>
-                <li className="placers">
-                  <input
-                    maxLength={1}
-                    className="wplace4"
-                    value={this.state.wplace4}
-                    onChange={this.handleInputChange}
-                    name="wplace4"
-                    autoComplete="off"
-                    type="text"
-                  />
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <button className="submitButton" type="submit" value="Submit">
-            Submit
+        <form onSubmit={this.handleSubmit}>
+          <div className="form-section">
+            <h3>🟩 Letters in Correct Position</h3>
+            <p className="tip">Enter green letters from Wordle in their correct spots</p>
+            <ul className="place-list">
+              <li>
+                <input
+                  maxLength={1}
+                  value={this.state.place0}
+                  onChange={this.handleInputChange}
+                  name="place0"
+                  autoComplete="off"
+                  type="text"
+                  placeholder="1"
+                />
+              </li>
+              <li>
+                <input
+                  maxLength={1}
+                  value={this.state.place1}
+                  onChange={this.handleInputChange}
+                  name="place1"
+                  autoComplete="off"
+                  type="text"
+                  placeholder="2"
+                />
+              </li>
+              <li>
+                <input
+                  maxLength={1}
+                  value={this.state.place2}
+                  onChange={this.handleInputChange}
+                  name="place2"
+                  autoComplete="off"
+                  type="text"
+                  placeholder="3"
+                />
+              </li>
+              <li>
+                <input
+                  maxLength={1}
+                  value={this.state.place3}
+                  onChange={this.handleInputChange}
+                  name="place3"
+                  autoComplete="off"
+                  type="text"
+                  placeholder="4"
+                />
+              </li>
+              <li>
+                <input
+                  maxLength={1}
+                  value={this.state.place4}
+                  onChange={this.handleInputChange}
+                  name="place4"
+                  autoComplete="off"
+                  type="text"
+                  placeholder="5"
+                />
+              </li>
+            </ul>
+          </div>
+          
+          <div className="form-section">
+            <h3>🟨 Letters in Wrong Position</h3>
+            <p className="tip">Enter yellow letters that are in the word but wrong spots</p>
+            <ul className="wplace-list">
+              <li>
+                <input
+                  maxLength={1}
+                  value={this.state.wplace0}
+                  onChange={this.handleInputChange}
+                  name="wplace0"
+                  autoComplete="off"
+                  type="text"
+                  placeholder="1"
+                />
+              </li>
+              <li>
+                <input
+                  maxLength={1}
+                  value={this.state.wplace1}
+                  onChange={this.handleInputChange}
+                  name="wplace1"
+                  autoComplete="off"
+                  type="text"
+                  placeholder="2"
+                />
+              </li>
+              <li>
+                <input
+                  maxLength={1}
+                  value={this.state.wplace2}
+                  onChange={this.handleInputChange}
+                  name="wplace2"
+                  autoComplete="off"
+                  type="text"
+                  placeholder="3"
+                />
+              </li>
+              <li>
+                <input
+                  maxLength={1}
+                  value={this.state.wplace3}
+                  onChange={this.handleInputChange}
+                  name="wplace3"
+                  autoComplete="off"
+                  type="text"
+                  placeholder="4"
+                />
+              </li>
+              <li>
+                <input
+                  maxLength={1}
+                  value={this.state.wplace4}
+                  onChange={this.handleInputChange}
+                  name="wplace4"
+                  autoComplete="off"
+                  type="text"
+                  placeholder="5"
+                />
+              </li>
+            </ul>
+          </div>
+          
+          <div className="form-section">
+            <h3>⚫ Excluded Letters</h3>
+            <p className="tip">Enter gray letters that are not in the word</p>
+            <input
+              className="bannedLetters"
+              value={this.state.bannedLetters}
+              onChange={this.handleInputChange}
+              name="bannedLetters"
+              autoComplete="off"
+              placeholder="Enter excluded letters..."
+              type="text"
+            />
+          </div>
+          
+          <button className="submitButton" type="submit">
+            🔍 Find Words
           </button>
         </form>
       </React.Fragment>

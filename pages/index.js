@@ -1,5 +1,6 @@
 import Form from "../components/Form";
 import Counter from "../components/Counter";
+import ThemeToggle from "../components/ThemeToggle";
 import Head from 'next/head';
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       
       <div className="App">
         <header className="App-header">
+          <ThemeToggle />
           <h1>
             <span>W</span>
             <span>o</span>
