@@ -1,23 +1,30 @@
-Wordle Solver is an app that helps users to solve wordle. It is very much a work in progress.
+# Wordle Solver - Next.js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a Wordle Solver app built with Next.js, converted from a Create React App. It helps users solve Wordle by filtering possible words based on known letters and positions.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Interactive form for Wordle solving
+- Real-time word filtering based on:
+  - Letters in correct positions
+  - Letters in wrong positions  
+  - Excluded letters
+- Visit counter using localStorage
+- Responsive design
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+First, install dependencies:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+npm install
+```
 
-### `npm test`
+Then, run the development server:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm run dev
+```
 
 ### `npm run build`
 
