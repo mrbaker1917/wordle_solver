@@ -1067,6 +1067,7 @@ const words5 = [
   "juicy",
   "jumbo",
   "jumpy",
+  "junky",
   "junta",
   "junto",
   "juror",
