@@ -941,6 +941,7 @@ const words5 = [
   "gully",
   "gumbo",
   "gummy",
+  "gunky",
   "guppy",
   "gusto",
   "gusty",
