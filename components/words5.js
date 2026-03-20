@@ -1324,6 +1324,8 @@ const words5 = [
   "nylon",
   "nymph",
   "oaken",
+  "oasis",
+  "oaths",
   "obese",
   "occur",
   "ocean",
