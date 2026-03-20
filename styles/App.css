@@ -341,12 +341,15 @@ ul {
 
 .filtered-words ul {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 0.75rem;
   background: var(--bg-tertiary);
   padding: 1.5rem;
   border-radius: var(--border-radius-sm);
   border: 1px solid var(--border-color);
+  justify-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .filtered-words li {
