@@ -502,6 +502,7 @@ const words5 = [
   "crust",
   "crypt",
   "cubic",
+  "cubit",
   "cumin",
   "curio",
   "curly",
