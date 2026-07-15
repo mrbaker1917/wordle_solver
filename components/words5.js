@@ -1497,6 +1497,7 @@ const words5 = [
   "prude",
   "prune",
   "psalm",
+  "pshaw",
   "pubic",
   "pudgy",
   "puffy",
