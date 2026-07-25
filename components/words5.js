@@ -60,6 +60,7 @@ const words5 = [
   "allow",
   "alloy",
   "aloft",
+  "aloha",
   "alone",
   "along",
   "aloof",

@@ -1,28 +1,28 @@
 globalThis.__BUILD_MANIFEST = {
   "pages": {
     "/": [
-      "static/chunks/02hnllp5u9-uh.js",
-      "static/chunks/33iahu4aeqsi0.js",
-      "static/chunks/turbopack-1nw080i629gfp.js"
+      "static/chunks/21m500wq-8_ur.js",
+      "static/chunks/0-vn9mg0tjn1b.js",
+      "static/chunks/turbopack-1dx4tf07erdw2.js"
     ],
     "/_app": [
       "static/chunks/0kfkn9eaf4_fi.js",
-      "static/chunks/33iahu4aeqsi0.js",
+      "static/chunks/0-vn9mg0tjn1b.js",
       "static/chunks/11ercy630wdz3.css",
-      "static/chunks/turbopack-29wa6sw431ew_.js"
+      "static/chunks/turbopack-3juy5h9b9yxae.js"
     ],
     "/_error": [
       "static/chunks/2tg08kl579oif.js",
-      "static/chunks/33iahu4aeqsi0.js",
-      "static/chunks/turbopack-0p5m-w0mgysxs.js"
+      "static/chunks/0-vn9mg0tjn1b.js",
+      "static/chunks/turbopack-0m1fk7qtuafv4.js"
     ]
   },
   "devFiles": [],
   "polyfillFiles": [],
   "lowPriorityFiles": [
-    "static/gplIp0RXCw5vp3DYEEULu/_buildManifest.js",
-    "static/gplIp0RXCw5vp3DYEEULu/_ssgManifest.js",
-    "static/gplIp0RXCw5vp3DYEEULu/_clientMiddlewareManifest.js"
+    "static/OYEwXtzvTu4qqm-7sGKvY/_buildManifest.js",
+    "static/OYEwXtzvTu4qqm-7sGKvY/_ssgManifest.js",
+    "static/OYEwXtzvTu4qqm-7sGKvY/_clientMiddlewareManifest.js"
   ],
   "rootMainFiles": []
 };
