@@ -1,18 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+
+function getVisitCount() {
+    if (typeof window === "undefined") return 0;
+    const storedCount = localStorage.getItem("pageVisits");
+    const initialCount = Number(storedCount) || 0;
+    const newCount = initialCount + 1;
+    localStorage.setItem("pageVisits", newCount);
+    return newCount;
+}
 
 function Counter() {
-    const [count, setCount] = useState(0);
+    const [count] = useState(getVisitCount);
 
-    useEffect(() => {
-        const storedCount = localStorage.getItem("pageVisits");
-        const initialCount = Number(storedCount) || 0;
-        setCount(initialCount + 1);
-        localStorage.setItem("pageVisits", initialCount + 1);
-    },[]);
-    
     return (
         <div className="counter">
-            📊 You have visited this app <strong>{count}</strong> time{count !== 1 ? 's' : ''}!
+            📊 You have visited this app <strong suppressHydrationWarning>{count}</strong> time{count !== 1 ? 's' : ''}!
         </div>
     );
 }
