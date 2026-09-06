@@ -178,6 +178,7 @@ const words5 = [
   "beget",
   "begin",
   "begun",
+  "beige",
   "being",
   "belch",
   "belie",
