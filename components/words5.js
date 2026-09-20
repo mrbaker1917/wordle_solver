@@ -2254,6 +2254,7 @@ const words5 = [
   "wagon",
   "waist",
   "waive",
+  "waken",
   "waltz",
   "warty",
   "waste",
