@@ -1620,6 +1620,7 @@ const words5 = [
   "risen",
   "riser",
   "risky",
+  "ritzy",
   "rival",
   "river",
   "rivet",
